@@ -8,6 +8,8 @@ public class SharedPlaces {
     private int rating;
     private boolean visited;
 
+    public SharedPlaces() {}
+
     //Constructor
     public SharedPlaces(int placeid, String name, String activity, int rating, boolean visited){
         this.placeid=placeid;
