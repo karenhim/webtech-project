@@ -3,6 +3,8 @@ package karenhim.shared_places_application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SharedPlacesService {
     @Autowired
@@ -15,4 +17,8 @@ public class SharedPlacesService {
     public SharedPlaces get(Long id) {
         return sharedPlacesRepository.findById(id).orElseThrow(() -> new RuntimeException());
     }
+
+/*    public List<SharedPlaces> getAll() {
+        return sharedPlacesRepository.findAll().to;
+    }*/
 }

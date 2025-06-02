@@ -1,29 +1,38 @@
 package karenhim.shared_places_application;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class SharedPlaces {
 
-    private int placeid;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long placeid;
     private String name;
     private String activity;
     private int rating;
     private boolean visited;
 
-    public SharedPlaces() {}
-
-    //Constructor
-    public SharedPlaces(int placeid, String name, String activity, int rating, boolean visited){
-        this.placeid=placeid;
-        this.name=name;
-        this.activity=activity;
-        this.rating=rating;
-        this.visited=visited;
+    public SharedPlaces() {
     }
 
-    public int getPlaceid() {
+    //Constructor
+    public SharedPlaces(Long placeid, String name, String activity, int rating, boolean visited) {
+        this.placeid = placeid;
+        this.name = name;
+        this.activity = activity;
+        this.rating = rating;
+        this.visited = visited;
+    }
+
+    public Long getPlaceid() {
         return placeid;
     }
 
-    public void setPlaceid(int placeid) {
+    public void setPlaceid(Long placeid) {
         this.placeid = placeid;
     }
 

@@ -11,7 +11,7 @@ import java.util.List;
 public class SharedPlacesController {
 
     @Autowired
-    SharedPlaces service;
+    SharedPlacesService service;
 
     @PostMapping("/SharedPlaces")
     public SharedPlaces createSharedPlaces(@RequestBody SharedPlaces SharedPlaces) {
@@ -21,9 +21,9 @@ public class SharedPlacesController {
     @GetMapping("/SharedPlaces")
     public List<SharedPlaces> testRoute() {
         return List.of(
-                new SharedPlaces(1, "Starbucks", "Cafe", 1, true),
-                new SharedPlaces(2, "Berliner Zoo", "Zoo", 5, false),
-                new SharedPlaces(3, "Mall Of Berlin", "Shopping center", 4, true)
+                new SharedPlaces(1L, "Starbucks", "Cafe", 1, true),
+                new SharedPlaces(2L, "Berliner Zoo", "Zoo", 5, false),
+                new SharedPlaces(3L, "Mall Of Berlin", "Shopping center", 4, true)
         );
     }
 }
