@@ -18,7 +18,7 @@ public class SharedPlacesService {
         return sharedPlacesRepository.findById(id).orElseThrow(() -> new RuntimeException());
     }
 
-/*    public List<SharedPlaces> getAll() {
-        return sharedPlacesRepository.findAll().to;
-    }*/
+    public List<SharedPlaces> getAll() {
+        return (List<SharedPlaces>) sharedPlacesRepository.findAll();
+    }
 }
