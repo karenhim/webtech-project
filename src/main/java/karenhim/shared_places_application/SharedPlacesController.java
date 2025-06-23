@@ -22,11 +22,5 @@ public class SharedPlacesController {
     public List<SharedPlaces> testRoute() {
 
         return service.getAll();
-        /* statt
-        return List.of(
-                new SharedPlaces(1L, "Starbucks", "Cafe", 1, true),
-                new SharedPlaces(2L, "Berliner Zoo", "Zoo", 5, false),
-                new SharedPlaces(3L, "Mall Of Berlin", "Shopping center", 4, true)
-        );*/
     }
 }

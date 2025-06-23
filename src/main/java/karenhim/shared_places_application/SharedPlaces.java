@@ -5,6 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/*
+- Java Persistence API entity (JPA)
+- each instance jas id, name, activity, rating, and visited flag
+ */
+
 @Entity
 public class SharedPlaces {
 
