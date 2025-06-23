@@ -5,6 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+is a service layer that is called by the controller. It injects the repo and exposes methods save(), get(), and getAll()
+ */
+
 @Service
 public class SharedPlacesService {
     @Autowired

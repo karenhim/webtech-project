@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/*
+A spring MVC REST controller with 2 endpoints
+ */
+
 @RestController
 public class SharedPlacesController {
 
