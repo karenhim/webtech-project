@@ -15,6 +15,7 @@ public class SharedPlaces {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     private String name;
     private String activity;
     private int rating;
