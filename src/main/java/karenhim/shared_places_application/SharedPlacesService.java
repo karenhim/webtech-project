@@ -25,4 +25,8 @@ public class SharedPlacesService {
     public List<SharedPlaces> getAll() {
         return (List<SharedPlaces>) sharedPlacesRepository.findAll();
     }
+
+    public void delete(Long id) {
+        sharedPlacesRepository.deleteById(id);
+    }
 }
