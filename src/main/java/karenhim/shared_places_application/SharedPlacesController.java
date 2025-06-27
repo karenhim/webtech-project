@@ -17,14 +17,13 @@ public class SharedPlacesController {
 
     @CrossOrigin
     @PostMapping("/SharedPlaces")
-    public SharedPlaces createSharedPlaces(@RequestBody SharedPlaces SharedPlaces) {
-        return service.save(SharedPlaces);
+    public SharedPlaces createSharedPlaces(@RequestBody SharedPlaces sharedPlaces) {
+        return service.save(sharedPlaces);
     }
 
     @CrossOrigin
     @GetMapping("/SharedPlaces")
     public List<SharedPlaces> testRoute() {
-
         return service.getAll();
     }
 
@@ -34,4 +33,3 @@ public class SharedPlacesController {
         service.delete(id);
     }
 }
-

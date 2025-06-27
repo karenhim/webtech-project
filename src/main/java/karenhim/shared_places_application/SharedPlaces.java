@@ -21,12 +21,21 @@ public class SharedPlaces {
     private int rating;
     private boolean visited;
 
-
+    // Default constructor for JPA
     public SharedPlaces() {
     }
 
-    //Constructor
+    // Constructor
     public SharedPlaces(String name, String activity, int rating, boolean visited) {
+        this.name = name;
+        this.activity = activity;
+        this.rating = rating;
+        this.visited = visited;
+    }
+
+    // Constructor with ID as Long
+    public SharedPlaces(Long id, String name, String activity, int rating, boolean visited) {
+        this.id = id;
         this.name = name;
         this.activity = activity;
         this.rating = rating;
@@ -67,5 +76,16 @@ public class SharedPlaces {
 
     public void setVisited(boolean visited) {
         this.visited = visited;
+    }
+
+    @Override
+    public String toString() {
+        return "SharedPlaces{" +
+                "placeid=" + id +
+                ", name='" + name + '\'' +
+                ", activity='" + activity + '\'' +
+                ", rating=" + rating +
+                ", visited=" + visited +
+                '}';
     }
 }
